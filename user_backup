@@ -8,6 +8,7 @@ adb disconnect > /dev/null
 
 # Initiate ADB connection to device
 adb connect "$DEVICE":5555 > /dev/null
+adb wait-for-device
 
 ## USER INSTALLED BACKUP
 printf "### BACKING UP ALL USER PACKAGES ###\n"
